@@ -259,6 +259,52 @@
       line-height: 1.65;
     }
 
+    .entry-details {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .entry-detail-row {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    .entry-detail-row strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .entry-streams {
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .entry-stream {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .entry-stream::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .entry-stream strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
     /* ── SKILLS ────────────────────────────────────────────────── */
     .skills-grid {
       display: grid;
@@ -450,16 +496,25 @@
     <!-- ── ABOUT ── -->
     <section id="about">
       <p class="hero-eyebrow">Portfolio</p>
-      <!-- EDIT: Your full name -->
       <h1 class="hero-name">Andreas Ntargaras</h1>
-      <!-- EDIT: Your title / one-liner -->
       <p class="hero-title">Senior Application Engineer and Data Scientist</p>
-      <!-- EDIT: 2–4 sentence bio -->
       <p class="hero-bio">
-        I work at the intersection of industry and academia, developing scalable systems and
-        contributing to applied research. Currently based in Athens, I collaborate with both
-        engineering teams and research groups on problems in [your domain here]. I am passionate
-        about turning rigorous ideas into practical tools that matter.
+            I am an engineer and data scientist with a strong foundation in applied mathematics and
+        physical sciences, working at the intersection of industry and academic research. My work
+        spans the full data science lifecycle — from data acquisition and engineering through
+        model development, deployment, and long-term monitoring in production environments.
+        Currently, I apply machine learning and optical data analysis to semiconductor metrology
+        at n&amp;k Technology, while maintaining active ties to the research community through
+        collaborative publications.
+        <br><br>
+        I thrive in multidisciplinary environments, having contributed to teams across multiple 
+        domains such as semiconductor engineering, biomedical informatics, and computational 
+        mathematics. I communicate technical findings to both specialist and non-specialist 
+        audiences, including delivering on-site training at customer sites. Working remotely 
+        with a US-based team across time zones has reinforced my ability to self-organize, 
+        adapt to dynamic requirements, and maintain consistent delivery across research and 
+        production workstreams. I am driven by the challenge of turning rigorous methodology 
+        into reliable, production-ready tools that solve real problems.
       </p>
     </section>
 
@@ -467,45 +522,71 @@
     <section id="skills">
       <p class="section-label">Skills</p>
       <div class="skills-grid">
+        
+        <div class="skill-group">
+          <div class="skill-group-name">Data Science</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow/Keras</span>
+            <span class="skill-tag">UMAP</span>
+            <span class="skill-tag">Jupyter Notebooks</span>
+          </div>
+        </div>
+        
+        <div class="skill-group">
+          <div class="skill-group-name">Data Engineering</div>
+          <div class="skill-tags">
+            <span class="skill-tag">ETL Pipeline</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        
+        <div class="skill-group">
+          <div class="skill-group-name">MLOps & Visualization</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Model Monitoring</span>
+            <span class="skill-tag">Matplotlib</span>
+            <span class="skill-tag">Seaborn</span>
+          </div>
+        </div>
 
-        <!-- EDIT: Rename groups and swap tags freely -->
+        <div class="skill-group">
+          <div class="skill-group-name">Programming & Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Bash</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">LaTeX</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">MATLAB</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Domain Expertise</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Broadband Optical Reflectometry & Scatterometry</span>
+            <span class="skill-tag">Omics Data Analysis & Bioinformatics</span>
+            <span class="skill-tag">DNA Damage Analysis</span>
+          </div>
+        </div>
+        
         <div class="skill-group">
           <div class="skill-group-name">Languages</div>
           <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Bash</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-name">Frameworks</div>
-          <div class="skill-tags">
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">React</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-name">Infrastructure</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">GCP</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-name">Research</div>
-          <div class="skill-tags">
-            <span class="skill-tag">LaTeX</span>
-            <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">R</span>
-            <span class="skill-tag">Jupyter</span>
+            <span class="skill-tag">Greek (Native)</span>
+            <span class="skill-tag">English</span>
+            <span class="skill-tag">German</span>
           </div>
         </div>
 
@@ -517,31 +598,57 @@
       <p class="section-label">Work Experience</p>
       <div class="entries">
 
-        <!-- EDIT: Duplicate this block for each role -->
         <div class="entry">
           <div class="entry-meta">
-            <div class="entry-period">2022 — Present</div>
+            <div class="entry-period">Dec 2020 - Present</div>
           </div>
           <div class="entry-body">
-            <div class="entry-role">Senior Engineer</div>
-            <div class="entry-place">Company Name · Athens, Greece</div>
+            <div class="entry-role">Senior Application Engineer and Data Scientist</div>
+            <div class="entry-place">n&k Technology, Inc. · San Jose (CA), USA</div>
             <div class="entry-desc">
-              Led development of [key project or product]. Collaborated with cross-functional
-              teams to design and deploy [system/tool]. Reduced [metric] by X% through [approach].
+              Analysis of broadband optical reflectometry and scatterometry data for the estimation of
+              optical critical dimension (OCD) values and material properties in semiconductor metrology.
+              Developed specialized C++ solutions tailored to unique customer application requirements.
+              Designed and developed a production-ready machine learning component in Python for regression
+              analysis of metrology data. It is integrated with a C++ GUI application via script invocation and
+              JSON-based data exchange. Implemented CI/CD pipelines and a custom model drift monitoring
+              method to ensure long-term model reliability in production. Delivered on-site software
+              training sessions at customer sites.
             </div>
           </div>
         </div>
 
         <div class="entry">
           <div class="entry-meta">
-            <div class="entry-period">2019 — 2022</div>
+            <div class="entry-period">Apr 2018 — Oct 2018</div>
           </div>
           <div class="entry-body">
-            <div class="entry-role">Research Engineer</div>
-            <div class="entry-place">Previous Company · City, Country</div>
+            <div class="entry-role">Research Data Analyst</div>
+            <div class="entry-place">Biomedical Research Foundation of the Academy of Athens (BRFAA) · Athens, Greece</div>
             <div class="entry-desc">
-              Developed [component or system] as part of a research-driven team. Published
-              findings in collaboration with academic partners. Mentored junior engineers.
+              Part of a multidisciplinary team working on cancer and patient drug response research.
+              Created omics data analysis and visualization pipelines using R. Responsible for cleaning
+              and wrangling multiple drug response datasets into a unified, mutually comparable format.
+              Conducted literature comparison for external validation of the team's research results.
+              This work directly contributed to <a href="#publications" >Publication #3</a>.
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-meta">
+            <div class="entry-period">Oct 2014 — Jan 2015</div>
+          </div>
+          <div class="entry-body">
+            <div class="entry-role">Student Internship</div>
+            <div class="entry-place">Onassis Cardiac Surgery Center · Athens, Greece</div>
+            <div class="entry-desc">
+              Worked in the hemodynamic department under the supervision of the radiation physicist.
+              Performed daily real-time acquisition and monitoring of radiation dosimetry data across
+              active procedures, i.e. Catheter Ablation, Transcatheter Aortic Valve Implantation (TAVI),
+              and Pacemaker/Defibrillator Implantation. Responsible for data cleaning and wrangling
+              prior to analysis. Conducted a dosimetry level analysis at the conclusion of the internship
+              to assess cumulative exposure patterns and compliance with safety benchmarks.
             </div>
           </div>
         </div>
@@ -554,30 +661,51 @@
       <p class="section-label">Education</p>
       <div class="entries">
 
-        <!-- EDIT: Duplicate this block for each degree -->
         <div class="entry">
           <div class="entry-meta">
-            <div class="entry-period">2017 — 2019</div>
+            <div class="entry-period">Oct 2021</div>
           </div>
           <div class="entry-body">
-            <div class="entry-role">M.Sc. in [Your Field]</div>
-            <div class="entry-place">University Name · City, Country</div>
-            <div class="entry-desc">
-              Thesis: "[Your Thesis Title]." Supervised by Prof. [Name]. Graduated with
-              distinction / GPA X.X.
+            <div class="entry-role">Master's Degree in Data Science and Information Technologies</div>
+            <div class="entry-place">National and Kapodistrian University of Athens · Department of Informatics and Telecommunications | BRFAA | ATHENA IRC</div>
+            <div class="entry-details">
+              <div class="entry-detail-row"><strong>Grade:</strong> 9.17/10 (Excellent)</div>
+              <div class="entry-detail-row"><strong>Specialization Stream:</strong> Bioinformatics - Biomedical Data Science</div>
+              <div class="entry-detail-row">
+                <strong>Thesis:</strong>
+                "Sentence Classification with Hierarchical Neural Networks for Rhetorical Sections Extraction"
+                <br>
+                <span style="font-size:0.85rem;">NLP models &amp; PubMed web scraper served via Flask —
+                <a href="https://github.com/antarga/API_wScrapper" target="_blank">Code</a></span>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="entry">
           <div class="entry-meta">
-            <div class="entry-period">2013 — 2017</div>
+            <div class="entry-period">Feb 2018</div>
           </div>
           <div class="entry-body">
-            <div class="entry-role">B.Sc. in [Your Field]</div>
-            <div class="entry-place">University Name · City, Country</div>
-            <div class="entry-desc">
-              Graduated with honours. Final-year project: "[Project Title]."
+            <div class="entry-role">Diploma (MEng) — Integrated Master</div>
+            <div class="entry-place">National Technical University of Athens · School of Applied Mathematical and Physical Sciences</div>
+            <div class="entry-details">
+              <div class="entry-detail-row"><strong>Grade:</strong> 7.05/10 (Very Good)</div>
+              <div class="entry-detail-row"><strong>Direction:</strong> Physical Sciences</div>
+              <div class="entry-detail-row"><strong>Specialization Streams:</strong></div>
+              <div class="entry-streams">
+                <div class="entry-stream">
+                  Optoelectronics and Lasers
+                </div>
+                <div class="entry-stream">
+                  Nuclear Physics and Elementary Particles
+                </div>
+              </div>
+              <div class="entry-detail-row">
+                <strong>Thesis:</strong> "Detection of Oxidative Clustered DNA Lesions due to Systemic Effects of Ionizing Radiation"
+                <br>
+                This work contributed to <a href="#publications" >Publication #4</a>.
+              </div>
             </div>
           </div>
         </div>
@@ -639,7 +767,6 @@
       </p>
       <div class="contact-grid">
 
-        <!-- EDIT: Replace href values with your actual links -->
         <a class="contact-item" href="mailto:andreas.workplace@outlook.com">
           <!-- email icon -->
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
